@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> My 2026 Bucketlist!📝✅</title>
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+		
+		<style>
+			body {
+				font-family: 'Patrick Hand', 'Arial', sans-serif;
+				background-color: #ffffff;
+			}
+			.head-style {
+				font-size:50px;
+				text-shadow: 1px 1px 2px #ccc;
+
+			}
+			.checkbox-lists {
+				font-size:20px;
+				line-height: 2.25;
+				font-weight: normal;
+				
+			}
+			
+			.sub-task {
+				margin-left: 25px;
+				font-weight: normal;
+				
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1 class="head-style">My 2026 Bucketlist!📝</h1>
+		<hr>
+		
+	<form class="checkbox-lists"> <!-- This Form is for Checklists only -->
+	    <ul>
+      <li><input type="checkbox" id="task1"><label for="task1"> Fixing My Sleep Schedule ⏰</label></li>
+      <li><input type="checkbox" id="task2"><label for="task2"> Save at least Php 500 every Month 💰🗓️</label></li>
+
+      <li>
+        <input type="checkbox" id="task3">
+        <label for="task3"> Learn Japanese Language 🗣️</label>
+
+        <ul class="sub-task">
+          <li><input type="checkbox" id="task3a"><label for="task3a"> Learn and Write Hiragana Characters</label></li>
+          <li><input type="checkbox" id="task3b"><label for="task3b"> Learn and Write Katakana Characters</label></li>
+          <li><input type="checkbox" id="task3c"><label for="task3c"> Learn and Write Kanji</label></li>
+        </ul>
+      </li>
+
+      <li><input type="checkbox" id="task4"><label for="task4"> Master Barre Chords (Guitar) 🎸</label></li>
+      <li><input type="checkbox" id="task5"><label for="task5"> Learn Basic Power Chords (Guitar) 🎸</label></li>
+      <li><input type="checkbox" id="task6"><label for="task6"> Finish "30 Day Fitness Challenge" 💪</label></li>
+      <li><input type="checkbox" id="task7"><label for="task7"> Stay Overnight Outside 🌃</label></li>
+      <li><input type="checkbox" id="task8"><label for="task8"> Upload at least 5 Artworks each month 🎨</label></li>
+      <li><input type="checkbox" id="task9"><label for="task9"> Be Organized 🗂️</label></li>
+      <li><input type="checkbox" id="task10"><label for="task10"> Attend an Anime Convention Event in 2026! 愛</label></li>
+      <li><input type="checkbox" id="task11"><label for="task11"> Write a message to my future self (Dec 2026)</label></li>
+      <li><input type="checkbox" id="task12"><label for="task12"> Learn how to cook 5 simple meals 🍳</label></li>
+      <li><input type="checkbox" id="task13"><label for="task13"> Listen to at least 5 Podcasts every month 🎧</label></li>
+      <li><input type="checkbox" id="task14"><label for="task14"> Be Positive at All Times ✨</label></li>
+      <li><input type="checkbox" id="task15"><label for="task15"> Avoid Biting My Nails</label></li>
+      <li><input type="checkbox" id="task16"><label for="task16"> Enhance My Calculus Problem-Solving Skills</label></li>
+      <li><input type="checkbox" id="task17"><label for="task17"> Master HTML Coding Skills 👨‍💻</label></li>
+      <li><input type="checkbox" id="task18"><label for="task18"> Enhance My Java Coding Skills ☕</label></li>
+      <li><input type="checkbox" id="task19"><label for="task19"> Try a New Hobby Every Month</label></li>
+      <li><input type="checkbox" id="task20"><label for="task20"> Avoid Cramming ⏱️</label></li>
+      <li><input type="checkbox" id="task21"><label for="task21"> Create at least 5 Animations this Year</label></li>
+      <li><input type="checkbox" id="task22"><label for="task22"> Upload 5 Content Creation Videos 🎬</label></li>
+      <li><input type="checkbox" id="task23"><label for="task23"> Have a picnic with friends this 2026 🧺</label></li>
+
+      <li>
+        <input type="checkbox" id="task24">
+        <label for="task24"> Have a no-phone day 📵</label>
+
+        <ul class="sub-task">
+          <li><input type="checkbox" id="task24a"><label for="task24a"> Take a week off social media to recharge</label></li>
+        </ul>
+      </li>
+
+      <li><input type="checkbox" id="task25"><label for="task25"> Visit a museum on a free day 🏛️</label></li>
+    </ul>
+		</form>
+		
+		<script>
+			document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+			cb.checked = localStorage.getItem(cb.id) === "true";  // restore state
+			cb.onchange = () => localStorage.setItem(cb.id, cb.checked); // save state on change
+			});
+		</script>
+	</body>
+
+</html>
+
+
